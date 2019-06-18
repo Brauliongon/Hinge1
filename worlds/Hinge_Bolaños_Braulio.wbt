@@ -2,12 +2,79 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.34043412861821193 0.9321753586354274 0.12310038515321946 0.6869424955985098
-  position 1.6402109529724416 0.7834864723869932 2.3964227490914345
+  orientation -0.011484928770900705 -0.9999059230173838 0.007499435037465831 5.126163859789638
+  position 1.0169895265161222 0.38453362571723565 0.4949630850068308
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
+}
+Solid {
+  translation 0 0.25 0
+  children [
+    DEF cylinder Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 1
+        }
+      }
+      geometry Cylinder {
+        height 0.5
+        radius 0.05
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.5984155191951502e-08
+        axis 0 1 0
+        anchor 0 0.25 0
+        minStop 1
+        staticFriction 0.01
+      }
+      endPoint Solid {
+        translation 0 0.255 0
+        children [
+          DEF box Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.8 0 0
+              }
+            }
+            geometry Box {
+              size 0.1 0.01 1
+            }
+          }
+        ]
+        boundingObject USE box
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.0505 0 0
+      }
+      endPoint Solid {
+        translation 0.0505 0 0
+        rotation 0 0 1 6.283185307179586
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 0 0
+                emissiveColor 0 1 0
+              }
+            }
+            geometry Box {
+              size 0.001 0.003 0.01
+            }
+          }
+        ]
+        name "solid(1)"
+      }
+    }
+  ]
+  boundingObject USE cylinder
 }
