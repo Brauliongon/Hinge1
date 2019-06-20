@@ -8,6 +8,6 @@ projectionMode: ORTHOGRAPHIC
 renderingMode: PLAIN
 selectionDisabled: 0
 viewpointLocked: 0
-orthographicViewHeight: 0.480215
+orthographicViewHeight: 1.68217
 textFiles: 0 "../../../../usr/local/webots/projects/robots/k-team/khepera3/controllers/khepera3_gripper/khepera3_gripper.c"
 globalOptionalRendering: JointAxes::ConnectorAxes::AllBoundingObjects
