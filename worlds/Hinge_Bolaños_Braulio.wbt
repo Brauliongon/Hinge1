@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.3204209897144308 -0.915129670598964 -0.24467953600547881 4.91768090834141
-  position 0.9948947563913724 0.8802064507671239 0.11181578693506476
+  orientation 0.027466958969742772 -0.9926749512866669 -0.11765206013057285 3.6491517094816324
+  position 0.41359249135603954 0.5932422960990826 -1.0270875733444274
 }
 TexturedBackground {
 }
@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation -0.025451858919455006 0.25 -0.020639252879159242
+  translation 0 0.25 0
   children [
     Shape {
       appearance PBRAppearance {
@@ -26,7 +26,7 @@ Solid {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.14563346241576455
+        position -4.255036480359789e-58
         axis 0 1 0
         anchor 0 0.225 0
         minStop -0.785
@@ -35,8 +35,8 @@ Solid {
         staticFriction 0.01
       }
       endPoint Solid {
-        translation -2.7965256575063724e-17 0.25498431953667233 5.951476384915461e-19
-        rotation -1.5528747514193607e-22 1 3.010383928189711e-21 0.14563346241576533
+        translation -2.7755575615628895e-17 0.255 -3.4694469519536103e-18
+        rotation -0.12403473458918009 4.016785919056577e-36 0.9922778767136712 4.386076908609537e-22
         children [
           Shape {
             appearance PBRAppearance {
@@ -50,6 +50,8 @@ Solid {
         ]
         physics Physics {
         }
+        linearVelocity -1.0099659396775103e-25 -1.2139210832630653e-07 -1.2624574243333194e-26
+        angularVelocity -4.209920086843472e-25 1.2677586874217443e-55 3.367936071052463e-24
       }
     }
     HingeJoint {
@@ -58,7 +60,7 @@ Solid {
         anchor 0 0 -0.035
       }
       endPoint Solid {
-        translation 0 -1.5680463327616412e-05 -0.035
+        translation 0 0 -0.035
         children [
           Shape {
             appearance PBRAppearance {
@@ -73,6 +75,7 @@ Solid {
         name "solid(1)"
         physics Physics {
         }
+        linearVelocity 0 -1.213921088378956e-07 0
       }
     }
   ]
